@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  refresh-art:
+  heatmap:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -33,11 +33,11 @@ jobs:
         env:
           GH_PROFILE_USER: ${{ github.repository_owner }}
 
-      - name: Render animated profile cards
-        run: python scripts/render_cards.py
+      - name: Render contribution heatmap SVG
+        run: python scripts/render_heatmap_svg.py
 
       - name: Commit and push updated assets
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(art): refresh animated cards and heatmap [skip ci]"
-          file_pattern: "data/contributions.json cards/**"
+          commit_message: "chore: refresh contribution graph [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg"
