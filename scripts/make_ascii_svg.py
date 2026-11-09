@@ -18,26 +18,29 @@ ROOT = os.path.join(HERE, "..")
 SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "source-prepped.png")
 OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, "polin-ascii.svg")
 
-# Grid configuration: target ~390px wide to sit side-by-side with the 490px info card
-COLS = int(os.environ.get("COLS", 96))
-ART_W_TARGET = 350
-CELL_W = ART_W_TARGET / COLS
-CELL_H = CELL_W * 1.875
-ROWS = round(COLS * 0.53)
-RAMP = " .`:-=+*cs#%@"  # Bright (sparse) -> Dark (dense)
-
-CONTRAST = 1.15
-BRIGHTNESS = 1.05
-GAMMA = 1.12
-WHITE_FLOOR = 0.88  # Luminance above this maps to space (clears background)
-
+# Grid configuration: exactly 370px wide x 430px tall to sit side-by-side with 490x430 info card
+COLS = int(os.environ.get("COLS", 64))
+ROWS = int(os.environ.get("ROWS", 36))
+CANVAS_W = 370
+CANVAS_H = 430
 PAD = 16
 TITLEBAR_H = 34
-STATUS_H = 32
-ART_W = COLS * CELL_W
-ART_H = ROWS * CELL_H
-CANVAS_W = int(ART_W + PAD * 2)
-CANVAS_H = int(TITLEBAR_H + ART_H + STATUS_H + PAD)
+STATUS_H = 36
+
+ART_W = CANVAS_W - PAD * 2
+ART_TOP = TITLEBAR_H + 8
+STATUS_LINE_Y = CANVAS_H - STATUS_H
+STATUS_Y = STATUS_LINE_Y + 22
+
+ART_H = STATUS_LINE_Y - ART_TOP - 6
+CELL_W = ART_W / COLS
+CELL_H = ART_H / ROWS
+RAMP = " .:-=+*#%@"  # Bright (sparse) -> Dark (dense)
+
+CONTRAST = 1.22
+BRIGHTNESS = 1.05
+GAMMA = 1.08
+WHITE_FLOOR = 0.88  # Luminance above this maps to space (clears background)
 
 BG = "#0d1117"
 BG2 = "#111827"
@@ -48,7 +51,7 @@ CURSOR = "#38bdf8"
 ACCENT = "#58a6ff"
 
 # Animation timing
-ROW_DUR = 4.8 / ROWS
+ROW_DUR = 4.2 / ROWS
 STAGGER = ROW_DUR
 
 
@@ -85,7 +88,7 @@ def main():
         print("[!] Generating placeholder rows", file=sys.stderr)
         rows_txt = ["#" * COLS for _ in range(ROWS)]
 
-    art_top = TITLEBAR_H + 12
+    art_top = ART_TOP
 
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{CANVAS_W}" height="{CANVAS_H}" '
@@ -143,16 +146,14 @@ def main():
         )
 
     # Bottom status bar with persistent blinking cursor
-    status_line_y = TITLEBAR_H + ART_H + 20
-    status_y = status_line_y + 20
-    parts.append(f'<line x1="0" y1="{status_line_y:.1f}" x2="{CANVAS_W}" y2="{status_line_y:.1f}" stroke="{FRAME}"/>')
+    parts.append(f'<line x1="0" y1="{STATUS_LINE_Y:.1f}" x2="{CANVAS_W}" y2="{STATUS_LINE_Y:.1f}" stroke="{FRAME}"/>')
     
     status_prompt = 'polin@sapphire:~$ whoami <tspan fill="' + ACCENT + '" font-weight="600">Salehin Ahmed Polin</tspan>'
-    parts.append(f'<text x="{PAD}" y="{status_y:.1f}" fill="{TITLE_TEXT}" font-size="11">{status_prompt}</text>')
+    parts.append(f'<text x="{PAD}" y="{STATUS_Y:.1f}" fill="{TITLE_TEXT}" font-size="11">{status_prompt}</text>')
 
     cursor_x = PAD + 258
     parts.append(
-        f'<rect x="{cursor_x:.1f}" y="{status_y-11:.1f}" width="7" height="13" fill="{CURSOR}">'
+        f'<rect x="{cursor_x:.1f}" y="{STATUS_Y-11:.1f}" width="7" height="13" fill="{CURSOR}">'
         f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="1s" repeatCount="indefinite"/>'
         f'</rect>'
     )

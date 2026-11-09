@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.jpg
+*.jpeg
+face_cutout.png
+head-cropped.png
+passport-cutout.png
+polin_head_clean.png
+polin_dp.jpg
+passport-thumb.jpg
+polin1_face.jpg
+.DS_Store
