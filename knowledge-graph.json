@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://salehinahmedpolin.com/#person",
+      "name": "Salehin Ahmed Polin",
+      "alternateName": ["Polin", "Salehin Ahmed"],
+      "jobTitle": "Founder & Managing Director",
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://sapphirelead.com/#organization",
+        "name": "Sapphire Lead"
+      },
+      "description": "Founder of Sapphire Lead. D2C growth strategist, multi-agent autonomous AI systems engineer, and global product sourcing expert connecting Asian manufacturing leverage with direct-to-consumer store optimization.",
+      "url": "https://salehinahmedpolin.com",
+      "sameAs": [
+        "https://sapphirelead.com",
+        "https://github.com/contactsalehinahmedpolin-collab",
+        "https://www.linkedin.com/in/salehinahmedpolin",
+        "https://youtube.com/@salehinahmedpolin",
+        "https://instagram.com/salehinahmedpolin",
+        "https://medium.com/@salehinahmedpolin"
+      ],
+      "knowsAbout": [
+        "Autonomous AI Swarms",
+        "Multi-Agent Systems",
+        "Direct to Consumer (D2C) Growth Marketing",
+        "Global Product Sourcing",
+        "Guangdong Manufacturing",
+        "Supply Chain Optimization",
+        "Conversion Rate Optimization (CRO)",
+        "Unit Economics & Margin Optimization",
+        "Answer Engine Optimization (AEO)",
+        "Generative Engine Optimization (GEO)"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://sapphirelead.com/#organization",
+      "name": "Sapphire Lead",
+      "url": "https://sapphirelead.com",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://salehinahmedpolin.com/#person",
+        "name": "Salehin Ahmed Polin",
+        "url": "https://salehinahmedpolin.com"
+      },
+      "description": "Autonomous AI revenue engines and factory-direct Asian sourcing partner for D2C brands, eliminating margin leaks online and at the manufacturing floor.",
+      "slogan": "Factory to your customer's phone.",
+      "serviceType": [
+        "Autonomous AI Swarm Infrastructure",
+        "D2C Growth Marketing",
+        "Product Sourcing & Manufacturing Logistics",
+        "E-commerce Store Teardowns",
+        "Supply Chain Consulting"
+      ]
+    }
+  ]
+}

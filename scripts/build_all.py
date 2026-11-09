@@ -21,6 +21,7 @@ SCRIPTS = [
     ("make_ascii_svg.py", "Generating self-typing ASCII portrait SVG"),
     ("make_info_card.py", "Generating Neofetch system card SVG"),
     ("make_mesh_card.py", "Generating AI Swarm Telemetry HUD SVG"),
+    ("make_systems_card.py", "Generating Systems Built & Production Card SVG"),
 ]
 
 
