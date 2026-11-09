@@ -14,13 +14,13 @@ echo ""
 git remote remove origin 2>/dev/null || true
 git remote add origin "$REMOTE_URL"
 
-echo "[1/3] Compiling latest animated assets..."
-/Users/salehinahmed/Downloads/JINNY\ SL/.venv/bin/python3 scripts/build_all.py
+echo "[1/3] Compiling luxury animated SVG card suite..."
+/Users/salehinahmed/Downloads/JINNY\ SL/.venv/bin/python3 scripts/render_cards.py
 
 echo ""
 echo "[2/3] Staging and committing changes..."
 git add .
-git commit -m "chore(art): update profile svgs and readme telemetry" 2>/dev/null || echo "Working tree clean, proceeding..."
+git commit -m "feat(art): compile animated card suite with editorial hero, heatmap, bento tiles, and swarms HUD" 2>/dev/null || echo "Working tree clean, proceeding..."
 
 echo ""
 echo "[3/3] Pushing to GitHub (main branch)..."

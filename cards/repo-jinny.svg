@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="293.333" height="194" viewBox="0 0 293.333 194" role="img" aria-label="jinny-telemetry: Autonomous Telegram bot control room with 1-tap reply approvals and warm inbox relay."><title>jinny-telemetry: Autonomous Telegram bot control room with 1-tap reply approvals and warm inbox relay.</title><style>
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes pop { 0% { opacity: 0; transform: scale(.4); } 70% { opacity: 1; transform: scale(1.15); } 100% { opacity: 1; transform: none; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+@keyframes nudge { 0%, 100% { transform: none; } 50% { transform: translateX(5px); } }
+@keyframes tilein {
+  0% { opacity: 0; transform: translateY(60px) scale(.85); }
+  60% { opacity: 1; transform: translateY(-6px) scale(1.02); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes shine-sweep {
+  0% { transform: translateX(-400px); }
+  25%, 100% { transform: translateX(500px); }
+}
+@keyframes ring { 0% { opacity: .7; transform: scale(.2); } 100% { opacity: 0; transform: scale(2.2); } }
+@keyframes pulse-flow { 0% { stroke-dashoffset: 24; } 100% { stroke-dashoffset: 0; } }
+
+.r { opacity: 0; animation: rise .8s cubic-bezier(.2,.7,.2,1) both; transform-box: fill-box; }
+.f { opacity: 0; animation: fade .9s ease-out both; }
+.g { transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); animation: grow .8s cubic-bezier(.2,.7,.2,1) both; }
+.p { opacity: 0; transform-box: fill-box; transform-origin: center; animation: pop .4s ease-out both; }
+.live { animation: pulse 1.6s ease-in-out infinite; }
+.n { transform-box: fill-box; animation: nudge 1.8s ease-in-out infinite; }
+.ti { opacity: 0; transform-box: fill-box; transform-origin: 50% 60%; animation: tilein 1s cubic-bezier(.2,.8,.2,1) both; }
+.rg { opacity: 0; transform-box: fill-box; transform-origin: center; animation: ring 1.2s ease-out both; }
+.flow-line { stroke-dasharray: 6 6; animation: pulse-flow 1.2s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .r,.f,.g,.p,.live,.n,.ti,.rg,.flow-line { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+</style><g transform="translate(8.000 0)">
+<rect width="285.3333333333333" height="180" rx="14" fill="#111827" stroke="#30363d" stroke-width="1.2"/>
+<g class="r" style="animation-delay:1.84s">
+  <rect x="20" y="24" width="8" height="8" rx="2" fill="#10b981"/>
+  <text x="36" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#f0f6fc">jinny-telemetry</text>
+  <text class="r" style="animation-delay:2.19s" x="20" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">Autonomous Telegram bot control</text><text class="r" style="animation-delay:2.27s" x="20" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">room with 1-tap reply approvals</text><text class="r" style="animation-delay:2.35s" x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">and warm inbox relay.</text>
+  <line x1="20" y1="144" x2="265.3333333333333" y2="144" stroke="#30363d" stroke-width="1"/>
+  <circle cx="26" cy="162" r="3.5" fill="#10b981"/>
+  <text x="36" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600" fill="#6e7681">Python / Telegram API</text>
+  <text class="n" x="257.3333333333333" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="12" fill="#10b981">↗</text>
+</g>
+</g></svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880.000" height="274" viewBox="0 0 880.000 274" role="img" aria-label="Autonomous AI Swarm Mesh Telemetry"><title>Autonomous AI Swarm Mesh Telemetry</title><style>
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes pop { 0% { opacity: 0; transform: scale(.4); } 70% { opacity: 1; transform: scale(1.15); } 100% { opacity: 1; transform: none; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+@keyframes nudge { 0%, 100% { transform: none; } 50% { transform: translateX(5px); } }
+@keyframes tilein {
+  0% { opacity: 0; transform: translateY(60px) scale(.85); }
+  60% { opacity: 1; transform: translateY(-6px) scale(1.02); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes shine-sweep {
+  0% { transform: translateX(-400px); }
+  25%, 100% { transform: translateX(500px); }
+}
+@keyframes ring { 0% { opacity: .7; transform: scale(.2); } 100% { opacity: 0; transform: scale(2.2); } }
+@keyframes pulse-flow { 0% { stroke-dashoffset: 24; } 100% { stroke-dashoffset: 0; } }
+
+.r { opacity: 0; animation: rise .8s cubic-bezier(.2,.7,.2,1) both; transform-box: fill-box; }
+.f { opacity: 0; animation: fade .9s ease-out both; }
+.g { transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); animation: grow .8s cubic-bezier(.2,.7,.2,1) both; }
+.p { opacity: 0; transform-box: fill-box; transform-origin: center; animation: pop .4s ease-out both; }
+.live { animation: pulse 1.6s ease-in-out infinite; }
+.n { transform-box: fill-box; animation: nudge 1.8s ease-in-out infinite; }
+.ti { opacity: 0; transform-box: fill-box; transform-origin: 50% 60%; animation: tilein 1s cubic-bezier(.2,.8,.2,1) both; }
+.rg { opacity: 0; transform-box: fill-box; transform-origin: center; animation: ring 1.2s ease-out both; }
+.flow-line { stroke-dasharray: 6 6; animation: pulse-flow 1.2s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .r,.f,.g,.p,.live,.n,.ti,.rg,.flow-line { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+</style>
+<rect width="880" height="260" rx="14" fill="#111827" stroke="#30363d" stroke-width="1.2"/>
+<text class="f" style="animation-delay:0.10s" x="20" y="36" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1" fill="#38bdf8">AUTONOMOUS MULTI-AGENT SWARM MESH · 24/7 TELEMETRY</text>
+<g class="f" style="animation-delay:0.10s">
+  <circle class="live" cx="720" cy="32" r="4.5" fill="#10b981"/>
+  <text x="860" y="36" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600" fill="#10b981" text-anchor="end">SWARM SYNCHRONIZED</text>
+</g>
+
+<line class="flow-line" x1="216.0" y1="136.0" x2="234.66666666666666" y2="136.0" stroke="#58a6ff" stroke-width="2" opacity="0.6"/><line class="flow-line" x1="430.6666666666667" y1="136.0" x2="449.33333333333337" y2="136.0" stroke="#58a6ff" stroke-width="2" opacity="0.6"/><line class="flow-line" x1="645.3333333333334" y1="136.0" x2="664.0" y2="136.0" stroke="#58a6ff" stroke-width="2" opacity="0.6"/>
+<g class="r" style="animation-delay:0.20s"><rect x="20.0" y="68" width="196" height="136" rx="10" fill="#0c1017" stroke="#30363d" stroke-width="1.2"/><rect x="20.0" y="68" width="196" height="3.5" rx="2" fill="#a855f7"/><text x="32.0" y="92" fill="#a855f7" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="700">🧠 CLAUDE 3.5 SONNET</text><text x="32.0" y="108" fill="#6e7681" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="8.5" letter-spacing="0.5">STRATEGY & BRAIN</text><text x="32.0" y="132" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5">Lead scoring, verified signals</text><text x="32.0" y="146" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5">& sequence copywriting</text><line x1="32.0" y1="166" x2="204.0" y2="166" stroke="#30363d" stroke-width="1"/><circle cx="38.0" cy="183" r="3.5" fill="#10b981"/><text x="48.0" y="186" fill="#10b981" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="9" font-weight="600">Sync: Every 4h</text></g><g class="r" style="animation-delay:0.32s"><rect x="234.66666666666666" y="68" width="196" height="136" rx="10" fill="#0c1017" stroke="#30363d" stroke-width="1.2"/><rect x="234.66666666666666" y="68" width="196" height="3.5" rx="2" fill="#38bdf8"/><text x="246.66666666666666" y="92" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="700">⚡ GROK BOT (X / LIN)</text><text x="246.66666666666666" y="108" fill="#6e7681" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="8.5" letter-spacing="0.5">SIGNALS RADAR</text><text x="246.66666666666666" y="132" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5">Executive profiling, trigger scans</text><text x="246.66666666666666" y="146" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5">& social intelligence</text><line x1="246.66666666666666" y1="166" x2="418.66666666666663" y2="166" stroke="#30363d" stroke-width="1"/><circle cx="252.66666666666666" cy="183" r="3.5" fill="#10b981"/><text x="262.66666666666663" y="186" fill="#10b981" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="9" font-weight="600">Radar: 24/7 Scan</text></g><g class="r" style="animation-delay:0.44s"><rect x="449.3333333333333" y="68" width="196" height="136" rx="10" fill="#0c1017" stroke="#30363d" stroke-width="1.2"/><rect x="449.3333333333333" y="68" width="196" height="3.5" rx="2" fill="#10b981"/><text x="461.3333333333333" y="92" fill="#10b981" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="700">🛠️ CODEX / AGY CORE</text><text x="461.3333333333333" y="108" fill="#6e7681" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="8.5" letter-spacing="0.5">EXECUTION ENGINE</text><text x="461.3333333333333" y="132" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5">Telegram control room, tool</text><text x="461.3333333333333" y="146" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5">runner & autonomous CRM</text><line x1="461.3333333333333" y1="166" x2="633.3333333333333" y2="166" stroke="#30363d" stroke-width="1"/><circle cx="467.3333333333333" cy="183" r="3.5" fill="#10b981"/><text x="477.3333333333333" y="186" fill="#10b981" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="9" font-weight="600">Latency: < 200ms</text></g><g class="r" style="animation-delay:0.56s"><rect x="664.0" y="68" width="196" height="136" rx="10" fill="#0c1017" stroke="#30363d" stroke-width="1.2"/><rect x="664.0" y="68" width="196" height="3.5" rx="2" fill="#f59e0b"/><text x="676.0" y="92" fill="#f59e0b" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="700">🏭 GUANGDONG MESH</text><text x="676.0" y="108" fill="#6e7681" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="8.5" letter-spacing="0.5">SUPPLY CHAIN COGS</text><text x="676.0" y="132" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5">Direct factory quotes, bottles</text><text x="676.0" y="146" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5">& -45% COGS reduction</text><line x1="676.0" y1="166" x2="848.0" y2="166" stroke="#30363d" stroke-width="1"/><circle cx="682.0" cy="183" r="3.5" fill="#10b981"/><text x="692.0" y="186" fill="#10b981" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="9" font-weight="600">Savings: 30-50%</text></g>
+
+<line x1="20" y1="220" x2="860" y2="220" stroke="#30363d" stroke-width="1"/>
+<text x="20" y="238" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="10">
+  <tspan fill="#6e7681">SHARED REPO: </tspan><tspan fill="#58a6ff">sapphire-brain</tspan>
+  <tspan fill="#30363d">  |  </tspan>
+  <tspan fill="#6e7681">CHANNELS: </tspan><tspan fill="#38bdf8">Telegram Relay + 10 Warm Inboxes</tspan>
+  <tspan fill="#30363d">  |  </tspan>
+  <tspan fill="#6e7681">STATE: </tspan><tspan fill="#10b981">Autonomous Sprints Active</tspan>
+</text>
+</svg>
