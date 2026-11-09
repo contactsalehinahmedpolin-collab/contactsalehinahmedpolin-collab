@@ -14,20 +14,16 @@ echo ""
 git remote remove origin 2>/dev/null || true
 git remote add origin "$REMOTE_URL"
 
-echo "[1/3] Compiling luxury animated SVG card suite..."
-/Users/salehinahmed/Downloads/JINNY\ SL/.venv/bin/python3 scripts/render_cards.py
+echo "[1/3] Compiling animated terminal SVG suite..."
+"/Users/salehinahmed/Downloads/JINNY SL/.venv/bin/python3" scripts/build_all.py
 
 echo ""
 echo "[2/3] Staging and committing changes..."
 git add .
-git commit -m "feat(art): compile animated card suite with editorial hero, heatmap, bento tiles, and swarms HUD" 2>/dev/null || echo "Working tree clean, proceeding..."
+git commit -m "feat(art): compile animated terminal suite (monochrome ASCII portrait, neofetch card, heatmap & swarm HUD)" 2>/dev/null || echo "Working tree clean, proceeding..."
 
 echo ""
 echo "[3/3] Pushing to GitHub (main branch)..."
-echo "Note: If https://github.com/${REPO_NAME}/${REPO_NAME} is not created yet, please create it at:"
-echo "      👉 https://github.com/new (Repository name: ${REPO_NAME}, Public, DO NOT initialize with README)"
-echo ""
-
 git push -u origin main
 
 echo ""
